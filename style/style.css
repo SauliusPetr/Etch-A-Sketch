@@ -1,18 +1,22 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-
 body{
-    height: 100vh;
+    height: 100vp;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 18px;
+}
+
+.change-grid{
+    font-size: 28px;
+    border: 2px solid cornflowerblue;
+    border-radius: 12px;
+    padding: 8px;
 }
 
