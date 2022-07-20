@@ -18,7 +18,7 @@ function paintGrid() {
 
     divs.forEach((div) => {
         div.addEventListener('mouseover', () => {
-            div.setAttribute('style', 'background-color:pink;border:1px solid red;flex:1')
+            div.setAttribute('style', 'background-color:blue;border:1px solid red;flex:1')
         })
     });
 }
