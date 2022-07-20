@@ -31,10 +31,6 @@ button,
     padding: 5px;
 }
 
-.picker{
-    align-self: center;
-}
-
 .pressed{
     background-color: #f09e56;
     box-shadow: 1px 3px #e98c3a8f;
