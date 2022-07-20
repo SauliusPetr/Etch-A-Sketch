@@ -27,16 +27,16 @@ button,
     font-family: 'Times New Roman', Times, serif;
     border: 2px solid #f2e394;
     background-color: #f2ae72;
-    padding: 8px;
+    box-shadow: 2px 5px #f2ae728f;
+    padding: 5px;
 }
 
 .picker{
     align-self: center;
 }
 
-.ll{
-    background-color: #588c7e; /* buttons */
-    background-color:  #f2e394; /* borders */
-    background-color: #f2ae72; /* canvas */
-    background-color: #d96459; /* buttons */
+.pressed{
+    background-color: #f09e56;
+    box-shadow: 1px 3px #e98c3a8f;
+    transform: translateY(4px);
 }
