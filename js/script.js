@@ -1,4 +1,4 @@
-function createGrid(size=16) {
+function createGrid(size = 16) {
     const container = document.querySelector('.container');
     container.setAttribute('style', 'border:1px solid red;');
 
@@ -27,7 +27,28 @@ function paintGrid() {
     });
 }
 
-function removeGrid(){
+function removeGrid() {
     const divs = document.querySelector('.container');
-    divs.textContent='';
+    divs.textContent = '';
 }
+
+function changeSize() {
+    const newGridBtn = document.querySelector('.change-grid');
+    newGridBtn.addEventListener('click', () => {
+        let size = parseInt(prompt('Enter number for new grid size',16));
+        removeGrid();
+        createGrid(size);
+        paintGrid();
+    });
+}
+
+createGrid();
+paintGrid();
+changeSize();
+
+//add eventlistener to button
+
+//once pressed pop alert asking for sizebers
+//store sizebers
+//erase old grid
+//make new grid
