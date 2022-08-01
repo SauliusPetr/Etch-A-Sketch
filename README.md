@@ -3,5 +3,5 @@ Browser version of  a sketchpad and an Etch-A-Sketch mix to showcase my DOM mani
 
 Open the index.html ,hover mouse over grid to paint and press button to resize the grid.
 
-#Live demo
+# Live demo
 [click here](https://sauliuspetr.github.io/Etch-A-Sketch/)
