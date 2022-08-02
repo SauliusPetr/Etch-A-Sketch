@@ -17,18 +17,16 @@ function createGrid(size = 16) {
 function paintGrid() {
     const divs = document.querySelectorAll('.container > div > div');
     const color = document.querySelector('.picker');
+    color.addEventListener('click',()=>{
     divs.forEach((div) => {
-        div.addEventListener('mouseover', () => {
+        div.addEventListener('dragover', () => {
             div.setAttribute('style', `background-color:${color.value};border:1px solid #588c7e;flex:1`)
-        })
+        });
+        div.addEventListener('click', () => {
+            div.setAttribute('style', `background-color:${color.value};border:1px solid #588c7e;flex:1`)
+        });
     });
-    color.addEventListener('click', () => {
-        divs.forEach((div) => {
-            div.addEventListener('mouseover', () => {
-                div.setAttribute('style', `background-color:${color.value};border:1px solid #588c7e;flex:1`)
-            })
-        })
-    });
+});
 }
 
 
@@ -38,9 +36,12 @@ function eraser() {
     const eraseBtn = document.querySelector('.erase');
     eraseBtn.addEventListener('click', () => {
         divs.forEach((div) => {
-            div.addEventListener('mouseover', () => {
+            div.addEventListener('dragover', () => {
                 div.setAttribute('style', 'border:1px solid #588c7e;flex:1;background-color: #eaece5;');
-            })
+            });
+            div.addEventListener('click', () => {
+                div.setAttribute('style', 'border:1px solid #588c7e;flex:1;background-color: #eaece5;');
+            });
         });
     });
 
@@ -51,7 +52,11 @@ function rainbow() {
     const rainbowBtn = document.querySelector('.rainbow');
     rainbowBtn.addEventListener('click', () => {
         divs.forEach((div) => {
-            div.addEventListener('mouseover', () => {
+            div.addEventListener('dragover', () => {
+                div.setAttribute('style', `border:1px solid #588c7e;flex:1;
+                background-color: rgb(${getRandom()},${getRandom()},${getRandom()});`);
+            })
+            div.addEventListener('click', () => {
                 div.setAttribute('style', `border:1px solid #588c7e;flex:1;
                 background-color: rgb(${getRandom()},${getRandom()},${getRandom()});`);
             })
